@@ -1,0 +1,237 @@
+<!-- Project Group 11 -12 -->
+<head>
+    <meta charset="UTF-8">
+    <title>Pure Tank Solutions</title>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('background.png') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 700px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header img {
+            width: 300px;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .left-section, .right-section {
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .water-tank-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .water-tank {
+            position: relative;
+            background-color: #ccc;
+            width: 150px;
+            height: 250px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            overflow: hidden;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .water-level {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: #00bfff;
+            text-align: center;
+            color: white;
+            font-size: 24px;
+        }
+
+        .water-tank-label {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .water-quality-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .quality-gauge {
+            position: relative;
+            width: 320px;
+            height: 100px;
+            background: linear-gradient(to right, red, yellow, green);
+            border-radius: 100px 100px 0 0;
+            border: 2px solid #000;
+        }
+
+        .pointer {
+            position: absolute;
+            width: 5px;
+            height: 70px;
+            background-color: black;
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%) rotate(30deg); /* Adjust this to change pointer angle */
+            transform-origin: bottom;
+        }
+
+        .quality-labels {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 10px;
+        }
+
+        .quality-labels span {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .water-quality-label {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .solenoid-control {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .solenoid-control button {
+            padding: 10px 20px;
+            background-color: #00bfff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .solenoid-control button:hover {
+            background-color: #0099cc;
+        }
+
+        .live-gif-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .live-gif-container img {
+            width: 300px; 
+        }
+
+        .notification-panel {
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            height: 150px;
+            overflow-y: auto;
+            margin-top: 30px;
+        }
+
+        .documentation {
+            text-align: center;
+            margin-top: 20px;
+            clear: both;
+        }
+
+        .documentation a {
+            text-decoration: none;
+            color: white;
+            background-color: #ff6600;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .documentation a:hover {
+            background-color: #e65c00;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header with logo -->
+        <div class="header">
+            <img src="logo.png" alt="Logo">
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <!-- Left section with water tank and water quality -->
+            <div class="left-section">
+                <!-- Water Tank -->
+                <div class="water-tank-container">
+                    <div class="water-tank">
+                        <div class="water-level" style="height: 40%;">40%</div>
+                    </div>
+                    <div class="water-tank-label">Water Level</div>
+                </div>
+
+                <!-- Water Quality -->
+                <div class="water-quality-container">
+                    <div class="quality-gauge">
+                        <div class="pointer"></div>
+                    </div>
+                    <div class="quality-labels">
+                        <span style="color: red;">Bad</span>
+                        <span style="color: yellow;">Warning</span>
+                        <span style="color: green;">Good</span>
+                    </div>
+                    <div class="water-quality-label">Water Quality</div>
+                </div>
+            </div>
+
+            <!-- Right section with control and notifications -->
+            <div class="right-section">
+                <!-- Solenoid control button -->
+                <div class="solenoid-control">
+                    <button>Open/Close Solenoid Valve</button>
+                </div>
+
+                <!-- Live GIF -->
+                <div class="live-gif-container">
+                    <img src="live.gif" alt="Live">
+                </div>
+
+                <!-- Notification panel -->
+                <div class="notification-panel">
+                    <p>Notifications will appear here...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Documentation button -->
+        <div class="documentation">
+            <a href="documentation.pdf" target="_blank">Read User Manual</a>
+        </div>
+    </div>
+</body>
+</html>
